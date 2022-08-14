@@ -5,7 +5,7 @@
   "description": "",
   "scripts": {
     "start": "parcel src/index.html --open",
-    "clean": "rm -rf dist/*",
+    "clean": "rimraf dist/*",
     "build:parcel": "parcel build src/index.html --no-content-hash --no-source-maps --public-url ./",
     "build": "npm run clean && npm run build:parcel"
   },
@@ -21,7 +21,9 @@
     "url": "https://github.com/codrops/[NAME]/issues"
   },
   "devDependencies": {
-    "parcel": "^2.6.1"
+    "mkdirp": "^1.0.4",
+    "parcel": "^2.6.1",
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
     "gsap": "^3.10.4",
